@@ -1,4 +1,4 @@
-import { clsxMerge } from '../../utils';
+import { clsxMerge } from './../utils';
 import { type HTMLAttributes, useState, type MouseEvent } from 'react';
 import { AccordionItem, type AccordionItemProps } from './accordion-item';
 
@@ -14,23 +14,23 @@ export function Accordion({ items, type = 'multiple', className, ...rest }: Acco
 
   const handleItemClick =
     ({ label, onClick }: Pick<AccordionItemProps, 'label' | 'onClick'>) =>
-    (event: MouseEvent<HTMLDivElement>) => {
-      if (type === 'single') {
-        if (expandedItems.includes(label)) {
-          setExpandedItems([]);
-        } else {
-          setExpandedItems([label]);
+      (event: MouseEvent<HTMLDivElement>) => {
+        if (type === 'single') {
+          if (expandedItems.includes(label)) {
+            setExpandedItems([]);
+          } else {
+            setExpandedItems([label]);
+          }
+        } else if (type === 'multiple') {
+          if (expandedItems.includes(label)) {
+            setExpandedItems(expandedItems.filter(item => item !== label));
+          } else {
+            setExpandedItems([...expandedItems, label]);
+          }
         }
-      } else if (type === 'multiple') {
-        if (expandedItems.includes(label)) {
-          setExpandedItems(expandedItems.filter(item => item !== label));
-        } else {
-          setExpandedItems([...expandedItems, label]);
-        }
-      }
 
-      onClick?.(event);
-    };
+        onClick?.(event);
+      };
 
   return (
     <div className={clsxMerge('flex w-full flex-col gap-4 overflow-hidden', className)} {...rest}>
