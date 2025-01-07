@@ -64,15 +64,15 @@ export default function Home() {
             ) : (
                 <div className="flex flex-col gap-6 justify-self-center md:gap-12 lg:justify-self-start">
                     <div className="flex max-w-lg flex-col gap-6">
-                        <p className="text-sm font-semibold uppercase text-slate-500">
+                        <p className="text-sm font-semibold uppercase text-slate-400">
                             👋 Welcome to My Portfolio!
                         </p>
-                        <h3 className="text-4xl font-semibold text-slate-950 md:text-4xl">
+                        <h3 className="text-4xl font-semibold text-slate-400 md:text-4xl">
                             Hey, I’m Ahmad Alteneh, a Computer Science student with a passion for Software Devolpment, algorithms, and problem-solving. I love building clean, efficient, and scalable applications.
                             <br />
 
                         </h3>
-                        <p className="text-lg font-normal tracking-tight text-slate-500">
+                        <p className="text-lg font-normal tracking-tight text-slate-400">
                             ✨ Enough about me—feel free to explore the other sections to learn more! 🚀
                         </p>
                     </div>

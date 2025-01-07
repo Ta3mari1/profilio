@@ -1,4 +1,4 @@
-import { clsxMerge } from '../utils';
+import { clsxMerge } from './utils';
 import { type HTMLAttributes, type ReactNode } from 'react';
 import { cva } from 'class-variance-authority';
 
@@ -35,7 +35,7 @@ export interface TagVariants {
 
 export interface TagProps
   extends HTMLAttributes<HTMLSpanElement>,
-    Omit<TagVariants, 'startAdornment' | 'endAdornment'> {
+  Omit<TagVariants, 'startAdornment' | 'endAdornment'> {
   /** Content of the tag. */
   children: ReactNode;
   /** Start adornment of the tag e.g. an icon. */

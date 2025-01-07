@@ -1,4 +1,4 @@
-import { clsxMerge } from '../utils';
+import { clsxMerge } from './utils';
 import { cva } from 'class-variance-authority';
 import { type HTMLAttributes } from 'react';
 
@@ -44,7 +44,7 @@ export interface DividerVariants {
   direction?: 'horizontal' | 'vertical';
 }
 
-export interface DividerProps extends HTMLAttributes<HTMLDivElement>, DividerVariants {}
+export interface DividerProps extends HTMLAttributes<HTMLDivElement>, DividerVariants { }
 
 export function Divider({ size = 'thin', direction = 'horizontal', children, className, ...rest }: DividerProps) {
   return (
