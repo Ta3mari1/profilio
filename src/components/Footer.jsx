@@ -3,7 +3,7 @@ import { FaInstagram, FaTiktok, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className=" py-6 flex justify-center items-center space-x-14">
+        <footer className=" py-6 flex justify-center items-center space-x-14 ">
             {/* GitHub - Neon Green */}
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-[#39FF14] drop-shadow-lg hover:text-[#32CD32] transition duration-300" size={40} />
