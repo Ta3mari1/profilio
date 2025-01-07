@@ -1,16 +1,36 @@
 import UTD_Logo from "../components/images/UTDLOGO.jpg"
+import UOP from "../components/images/UOP.jpg"
+import Colin from "../components/images/Colin.jpg"
+import { motion } from "framer-motion";
+
+const fadeInVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+        opacity: 1,
+        y: 0,
+        transition: { delay: i * 0.3, duration: 0.6, ease: "easeOut" }
+    })
+};
 
 
-
-function EducationCard({ src, className, heading, description }) {
+function EducationCard({ src, className, index, heading, year, description }) {
     return (
-        <div className="flex flex-col md:flex-row  space-x-8 p-10 ">
-            <img src={src} alt="" className={className} />
-            <div>
-                <h2 className="text-2xl font-bold">{heading}</h2>
-                <p className="text-gray-600 mt-2">{description}</p>
+        <motion.div
+            custom={index}
+            initial="hidden"
+            animate="visible"
+            variants={fadeInVariant}
+            className="flex flex-1 flex-col  gap-6 overflow-hidden md:flex-row"
+        >
+            <div className="flex flex-col md:flex-row items-center justify-center space-x-8 p-10">
+                <img src={src} alt="" className={`h-[200px] w-[250px] object-contain-cover rounlded-3x ${className}`} />
+                <div className="flex-1 min-h-[150px]">
+                    <h2 className="text-3xl font-bold">{heading}</h2>
+                    <h3 className="text-1xl font-bold">{year}</h3>
+                    <p className="text-gray-600 mt-2">{description}</p>
+                </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
@@ -21,22 +41,25 @@ export default function EducationSkills() {
                 src={UTD_Logo}
                 className="h-[134px] w-[235px] -translate-x-1/8 md:h-[201px] md:w-[352px] rounded-3xl mx_auto"
                 index={0}
-                heading="Mastering UI/UX Design"
-                description="Discover the best practices and trends in UI/UX design, ensuring an intuitive and visually appealing user experience."
+                heading="The University of Texas at Dallas"
+                year="B.S. in Computer Science | Expected Graduation: Spring 2025 "
+                description="Relevant Coursework: Data Structures & Algorithms, Machine Learning, Database Systems, Operating Systems, Software Engineering, Computer Networks, Artificial Intelligence, Web Development, Programming Languages."
             />
             <EducationCard
-                src={UTD_Logo}
+                src={UOP}
                 className="h-[134px] w-[235px] -translate-x-1/8 md:h-[201px] md:w-[352px] rounded-3xl mx_auto"
                 index={1}
-                heading="Mastering UI/UX Design"
-                description="Discover the best practices and trends in UI/UX design, ensuring an intuitive and visually appealing user experience."
+                heading="The University of Petra"
+                year="Completed Coursework in Computer Science | 2020-2021"
+                description=" Relevant Coursework: Data Structures & Algorithms, Software Engineering, Database Systems, Computer Networks, Web Development. "
             />
             <EducationCard
-                src={UTD_Logo}
+                src={Colin}
                 className="h-[134px] w-[235px] -translate-x-1/8 md:h-[201px] md:w-[352px] rounded-3xl mx_auto"
                 index={2}
-                heading="Mastering UI/UX Design"
-                description="Discover the best practices and trends in UI/UX design, ensuring an intuitive and visually appealing user experience."
+                heading="Collin College"
+                year="Associate of Science (A.S.) | 2021-2023"
+                description="Completed Elective Coursework in Science and Mathematics."
             />
 
 
