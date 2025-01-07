@@ -5,7 +5,7 @@ const navigation = [
     { name: 'Home', to: '/' },
     { name: 'Projects', to: '/projects' },
     { name: 'Education/skills', to: '/Education_skills' },
-    { name: 'Contact', to: '/contact' }
+    { name: 'Movies', to: '/movies' }
 ]
 
 function classNames(...classes) {
@@ -14,7 +14,7 @@ function classNames(...classes) {
 
 export default function header() {
     return (
-        <Disclosure as="nav" className="bg-black">
+        <Disclosure as="nav" >
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

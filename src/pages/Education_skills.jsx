@@ -34,6 +34,8 @@ function EducationCard({ src, className, index, heading, year, description }) {
     );
 }
 
+
+
 export default function EducationSkills() {
     return (
         <section className="flex flex-col gap-6 py-12 md:gap-16 2xl:py-16 max-w-screen-2xl m-auto w-full px-3 sm:px-8 lg:px-16 xl:px-32">
@@ -64,44 +66,33 @@ export default function EducationSkills() {
 
             <br />
 
+
             <div className="flex flex-col items-center mt-12">
                 <h2 className="text-3xl font-bold text-center mb-6">Technical Skills</h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">Java</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">JavaScript</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">Python</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">React.js</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">Node.js</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">Flask</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">Django</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">SQL</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">MongoDB</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">Git & GitHub</p>
-                    </div>
-                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <p className="text-lg font-semibold">Docker</p>
-                    </div>
-                </div>
+                <motion.div
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.2 } }
+                    }}
+                >
+                    {[
+                        "Java", "JavaScript", "Python", "React.js",
+                        "Node.js", "Flask", "Django", "SQL",
+                        "MongoDB", "Git & GitHub", "Docker"
+                    ].map((skill, index) => (
+                        <motion.div
+                            key={skill}
+                            className="bg-gray-800 text-white p-4 rounded-lg shadow-md"
+                            variants={fadeInVariant}
+                            custom={index}
+                        >
+                            <p className="text-lg font-semibold">{skill}</p>
+                        </motion.div>
+                    ))}
+                </motion.div>
             </div>
         </section>
 
