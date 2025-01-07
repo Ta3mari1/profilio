@@ -62,7 +62,49 @@ export default function EducationSkills() {
                 description="Completed Elective Coursework in Science and Mathematics."
             />
 
+            <br />
 
+            <div className="flex flex-col items-center mt-12">
+                <h2 className="text-3xl font-bold text-center mb-6">Technical Skills</h2>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">Java</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">JavaScript</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">Python</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">React.js</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">Node.js</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">Flask</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">Django</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">SQL</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">MongoDB</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">Git & GitHub</p>
+                    </div>
+                    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                        <p className="text-lg font-semibold">Docker</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+
     );
 }
