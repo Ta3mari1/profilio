@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const navigation = [
     { name: 'Home', to: '/' },
     { name: 'Projects', to: '/projects' },
-    { name: 'About', to: '/about' },
+    { name: 'Education/skills', to: '/Education_skills' },
     { name: 'Contact', to: '/contact' }
 ]
 
