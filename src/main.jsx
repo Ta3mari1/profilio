@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
@@ -12,5 +13,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <App />
       <Footer />
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
